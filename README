@@ -1,0 +1,15 @@
+@example
+
+If you want to set 13px to base size
+
+body {
+	font-size : baseSize(13);
+}
+
+h1 {
+	font-size : size(20);
+}
+
+p {
+	font-size : size(10);
+}
