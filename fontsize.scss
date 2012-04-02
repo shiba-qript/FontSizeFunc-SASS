@@ -1,0 +1,39 @@
+// ---------------------------------------------
+//
+//		fontsize.scss
+//
+//		@example
+//		If you want to set 13px to base size
+//		body {
+//			font-size : baseSize(13);
+//		}
+//
+//		h1 {
+//			font-size : size(20);
+//		}
+//
+//		p {
+//			font-size : size(10);
+//		}
+//
+// --------------------------------------------
+
+$bodySize:0;
+
+@function baseSize($base) {
+	@if $base < 12{
+		$base:12;
+	}
+	@if $base > 16{
+		$base:16;
+	}
+	$bodySize:$base;
+	$size: percentage($base / 16);
+	@return $size;
+}
+
+@function size($size){
+	@return percentage($size / $bodySize);
+}
+
+
